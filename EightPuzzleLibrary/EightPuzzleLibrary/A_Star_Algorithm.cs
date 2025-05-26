@@ -31,9 +31,6 @@ namespace EightPuzzleLibrary
                     if (!closed_list.Contains(neighbor))
                         open_list.Enqueue(neighbor, neighbor.Full_cost);                   
                 }
-
-                while (open_list.Count > 0 && closed_list.Contains(open_list.Peek()))
-                    open_list.Dequeue();
             }
             return new List<Node>();
         }
